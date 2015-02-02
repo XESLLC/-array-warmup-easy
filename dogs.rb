@@ -11,35 +11,69 @@ end
 dogs = ["Fido", "Harleigh", "Mali", "Trixie", "Snow", "Victory"]
 
 def how_many_dogs(dogs)
-
+  dogs.length
 end
 
 def name_lengths(dogs)
-
+  new_array = Array.new
+  dogs.each do |dog|
+    new_array.push (dog.length)
+  end
+  new_array
 end
 
 def reverse_dog_names(dogs)
-
+  new_array = Array.new
+  dogs.each do |dog|
+    new_array.push (dog.reverse)
+  end
+  new_array
 end
 
-def first_three_dogs_with_each(dogs)
 
+def first_three_dogs_with_each(dogs)
+  new_array = Array.new
+  count = 0
+  dogs.each do |dog|
+    count += 1
+    if count < 4
+      new_array << dog
+    else
+    end
+  end
+  new_array
 end
 
 def first_three_dogs_without_each(dogs)
-
+  dogs.take(3)
 end
 
 def reverse_case_dog_names(dogs)
-
+  new_array = Array.new
+  dogs.each do |dog|
+    new_array << dog.swapcase
+  end
+  new_array
 end
 
 def sum_of_all_dog_name_lengths(dogs)
-
+  dog_length = 0
+  dogs.each do |dog|
+    dog_length += dog.length
+  end
+  dog_length
 end
 
 def dogs_with_long_names(dogs)
-  
+  check_name = Array.new
+  dogs.each do |dog|
+    if dog.length < 5
+      check_name << false
+    else
+      check_name << true
+    end
+  end
+  check_name
 end
 
 puts "*"*80
